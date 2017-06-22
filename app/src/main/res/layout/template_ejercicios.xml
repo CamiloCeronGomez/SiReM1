@@ -8,17 +8,14 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp">
 
@@ -27,140 +24,154 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imgEj"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:srcCompat="@color/imgbg"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@color/imgbg" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/nombreEj"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgEj"
+                tools:text="Nombre del Ejercicio" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/descripcionEj"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombreEj"
+                tools:text="Descripcion del ejercicio ..." />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/series"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcionEj"
+                tools:text="Series" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/descripcionSr"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/series"
+                tools:text="4 series de 10 repeticiones" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/iconUno"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 app:srcCompat="@drawable/ic_looks_one"
                 android:layout_marginLeft="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                android:layout_marginStart="8dp" />
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iconCheck"
+                android:layout_marginBottom="0dp" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/iconDos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_looks_two"
-                app:layout_constraintLeft_toRightOf="@+id/imageView2"
+                app:layout_constraintLeft_toRightOf="@+id/iconUno"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintBottom_toBottomOf="@+id/iconUno"
                 android:layout_marginStart="8dp" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/iconTres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_looks_3"
-                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                app:layout_constraintLeft_toRightOf="@+id/iconDos"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintBottom_toBottomOf="@+id/iconDos"
                 android:layout_marginStart="8dp" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/iconCuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_looks_4"
-                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                app:layout_constraintLeft_toRightOf="@+id/iconTres"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintBottom_toBottomOf="@+id/iconTres"
                 android:layout_marginStart="8dp" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/iconCinco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_looks_5"
-                app:layout_constraintLeft_toRightOf="@+id/imageView5"
                 android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                android:layout_marginStart="8dp" />
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iconCuatro"
+                app:layout_constraintLeft_toRightOf="@+id/iconCuatro"
+                app:srcCompat="@drawable/ic_looks_5" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnVerVideo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Button"
-                app:layout_constraintRight_toLeftOf="@+id/button2"
+                app:layout_constraintRight_toLeftOf="@+id/btnIniciar"
                 app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintTop_toBottomOf="@+id/iconCheck"
+                app:layout_constraintVertical_bias="1.0" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnIniciar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Button"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/button"
-                app:layout_constraintBottom_toBottomOf="@+id/button"
+                app:layout_constraintLeft_toRightOf="@+id/btnVerVideo"
+                app:layout_constraintBottom_toBottomOf="@+id/btnVerVideo"
                 android:layout_marginBottom="0dp" />
+
+            <ImageView
+                android:id="@+id/iconCheck"
+                android:layout_width="@dimen/icon_large"
+                android:layout_height="@dimen/icon_large"
+                app:srcCompat="@drawable/ic_check"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/descripcionSr"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
