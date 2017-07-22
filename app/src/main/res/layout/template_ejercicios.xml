@@ -1,178 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    >
+        <data>
+            <variable
+                name="exercise"
+                type="com.example.camilo.sirem.models.Ejercicio" />
+        </data>
+    <android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imgEj"
-                android:layout_width="0dp"
-                android:layout_height="160dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@color/imgbg" />
+                <ImageView
+                    android:id="@+id/imgEj"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/imgsize"
+                    app:imgUrl="@{exercise.imagen}"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@color/imgbg" />
 
-            <TextView
-                android:id="@+id/nombreEj"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgEj"
-                tools:text="Nombre del Ejercicio" />
+                <TextView
+                    android:id="@+id/nombreEj"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@{exercise.nombre}"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgEj"
+                    tools:text="Nombre del Ejercicio" />
 
-            <TextView
-                android:id="@+id/descripcionEj"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nombreEj"
-                tools:text="Descripcion del ejercicio ..." />
+                <TextView
+                    android:id="@+id/descripcionEj"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@{exercise.descripcion}"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nombreEj"
+                    tools:text="Descripcion del ejercicio ..." />
 
-            <TextView
-                android:id="@+id/series"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/descripcionEj"
-                tools:text="Series" />
+                <TextView
+                    android:id="@+id/series"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@{exercise.serie}"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionEj"
+                    tools:text="Series" />
 
-            <TextView
-                android:id="@+id/descripcionSr"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/series"
-                tools:text="4 series de 10 repeticiones" />
+                <TextView
+                    android:id="@+id/descripcionSr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@{exercise.descriocionS}"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/series"
+                    tools:text="4 series de 10 repeticiones" />
 
-            <ImageView
-                android:id="@+id/iconUno"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_looks_one"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/iconCheck"
-                android:layout_marginBottom="0dp" />
+                <ImageView
+                    android:id="@+id/iconUno"
+                    android:layout_width="@dimen/icon"
+                    android:layout_height="@dimen/icon"
+                    app:srcCompat="@drawable/ic_looks_one"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconCheck"
+                    android:layout_marginBottom="0dp" />
 
-            <ImageView
-                android:id="@+id/iconDos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_looks_two"
-                app:layout_constraintLeft_toRightOf="@+id/iconUno"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/iconUno"
-                android:layout_marginStart="8dp" />
+                <ImageView
+                    android:id="@+id/iconDos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_looks_two"
+                    app:layout_constraintLeft_toRightOf="@+id/iconUno"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconUno"
+                    android:layout_marginStart="8dp" />
 
-            <ImageView
-                android:id="@+id/iconTres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_looks_3"
-                app:layout_constraintLeft_toRightOf="@+id/iconDos"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/iconDos"
-                android:layout_marginStart="8dp" />
+                <ImageView
+                    android:id="@+id/iconTres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_looks_3"
+                    app:layout_constraintLeft_toRightOf="@+id/iconDos"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconDos"
+                    android:layout_marginStart="8dp" />
 
-            <ImageView
-                android:id="@+id/iconCuatro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_looks_4"
-                app:layout_constraintLeft_toRightOf="@+id/iconTres"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/iconTres"
-                android:layout_marginStart="8dp" />
+                <ImageView
+                    android:id="@+id/iconCuatro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_looks_4"
+                    app:layout_constraintLeft_toRightOf="@+id/iconTres"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconTres"
+                    android:layout_marginStart="8dp" />
 
-            <ImageView
-                android:id="@+id/iconCinco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/iconCuatro"
-                app:layout_constraintLeft_toRightOf="@+id/iconCuatro"
-                app:srcCompat="@drawable/ic_looks_5" />
+                <ImageView
+                    android:id="@+id/iconCinco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconCuatro"
+                    app:layout_constraintLeft_toRightOf="@+id/iconCuatro"
+                    app:srcCompat="@drawable/ic_looks_5" />
 
-            <Button
-                android:id="@+id/btnVerVideo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Button"
-                app:layout_constraintRight_toLeftOf="@+id/btnIniciar"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/iconCheck"
-                app:layout_constraintVertical_bias="1.0" />
+                <Button
+                    android:id="@+id/btnVerVideo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/vervideo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/btnIniciar"
+                    app:layout_constraintTop_toBottomOf="@+id/iconCheck"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:text="@string/vervideo" />
 
-            <Button
-                android:id="@+id/btnIniciar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Button"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/btnVerVideo"
-                app:layout_constraintBottom_toBottomOf="@+id/btnVerVideo"
-                android:layout_marginBottom="0dp" />
+                <Button
+                    android:id="@+id/btnIniciar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/iniciar"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnVerVideo"
+                    app:layout_constraintLeft_toRightOf="@+id/btnVerVideo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="@string/iniciar" />
 
-            <ImageView
-                android:id="@+id/iconCheck"
-                android:layout_width="@dimen/icon_large"
-                android:layout_height="@dimen/icon_large"
-                app:srcCompat="@drawable/ic_check"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/descripcionSr"
-                android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent" />
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v7.widget.CardView>
+                <ImageView
+                    android:id="@+id/iconCheck"
+                    android:layout_width="@dimen/icon_large"
+                    android:layout_height="@dimen/icon_large"
+                    app:srcCompat="@drawable/ic_check"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionSr"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
