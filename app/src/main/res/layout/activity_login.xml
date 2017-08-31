@@ -1,69 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.camilo.sirem.LoginActivity"
     >
-
-    <LinearLayout
-       android:layout_width="match_parent"
+    <data>
+     <variable
+         name="handler"
+         type="com.example.camilo.sirem.LoginActivity"/>
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:padding="@dimen/small">
+        tools:context="com.example.camilo.sirem.LoginActivity">
 
-        <TextView
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sirem"
-            android:textAlignment="center"
-            android:textSize="@dimen/big"
-            android:layout_marginBottom="@dimen/medium"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/small">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/usuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/medium">
+            <TextView
 
-            <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:hint="@string/usuario"/>
-        </android.support.design.widget.TextInputLayout>
+                android:text="@string/sirem"
+                android:textAlignment="center"
+                android:textSize="@dimen/big"
+                android:layout_marginBottom="@dimen/medium" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/contraseña"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputEditText
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/contrasena"/>
-        </android.support.design.widget.TextInputLayout>
-    </LinearLayout>
+                android:layout_marginBottom="@dimen/medium">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/usuario" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/contraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/contrasena" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
 
 
-    <android.support.design.widget.FloatingActionButton
-    android:layout_width="@dimen/icon_next"
-    android:layout_height="@dimen/icon_next"
-    app:fabSize="normal"
-    app:srcCompat="@drawable/ic_arrow"
-    app:layout_anchor="@+id/botNavLogin"
-    app:layout_anchorGravity="center_horizontal"
-    />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="@dimen/icon_next"
+            android:layout_height="@dimen/icon_next"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_arrow"
+            app:layout_anchor="@+id/botNavLogin"
+            app:layout_anchorGravity="center_horizontal"
+            android:onClick="@{()->handler.goToMain()}"/>
 
-<android.support.design.widget.BottomNavigationView
-    android:id="@+id/botNavLogin"
-    android:layout_width="match_parent"
-    android:layout_height="80dp"
-    android:layout_gravity="bottom"
-    />
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/botNavLogin"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom" />
 
-</android.support.design.widget.CoordinatorLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+
