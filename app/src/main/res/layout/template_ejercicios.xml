@@ -17,15 +17,15 @@
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -34,9 +34,9 @@
                 <ImageView
                     android:id="@+id/imgEj"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/imgsize"
-                    app:imgUrl="@{exercise.imagen}"
+                    android:layout_height="200dp"
                     android:scaleType="centerCrop"
+                    app:imgUrl="@{exercise.imagen}"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -104,44 +104,43 @@
 
                 <ImageView
                     android:id="@+id/iconUno"
-                    android:layout_width="@dimen/icon"
-                    android:layout_height="@dimen/icon"
-                    app:srcCompat="@drawable/ic_looks_one"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginLeft="8dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
                     android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/iconCheck"
-                    android:layout_marginBottom="0dp" />
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_looks_one" />
 
                 <ImageView
                     android:id="@+id/iconDos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_looks_two"
-                    app:layout_constraintLeft_toRightOf="@+id/iconUno"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/iconUno"
-                    android:layout_marginStart="8dp" />
+                    app:layout_constraintLeft_toRightOf="@+id/iconUno"
+                    app:srcCompat="@drawable/ic_looks_two" />
 
                 <ImageView
                     android:id="@+id/iconTres"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_looks_3"
-                    app:layout_constraintLeft_toRightOf="@+id/iconDos"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/iconDos"
-                    android:layout_marginStart="8dp" />
+                    app:layout_constraintLeft_toRightOf="@+id/iconDos"
+                    app:srcCompat="@drawable/ic_looks_3" />
 
                 <ImageView
                     android:id="@+id/iconCuatro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_looks_4"
-                    app:layout_constraintLeft_toRightOf="@+id/iconTres"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/iconTres"
-                    android:layout_marginStart="8dp" />
+                    app:layout_constraintLeft_toRightOf="@+id/iconTres"
+                    app:srcCompat="@drawable/ic_looks_4" />
 
                 <ImageView
                     android:id="@+id/iconCinco"
@@ -171,7 +170,6 @@
                     android:id="@+id/btnIniciar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="0dp"
                     android:text="@string/iniciar"
                     app:layout_constraintBottom_toBottomOf="@+id/btnVerVideo"
                     app:layout_constraintLeft_toRightOf="@+id/btnVerVideo"
@@ -180,13 +178,14 @@
 
                 <ImageView
                     android:id="@+id/iconCheck"
-                    android:layout_width="@dimen/icon_large"
-                    android:layout_height="@dimen/icon_large"
-                    app:srcCompat="@drawable/ic_check"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/descripcionSr"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginRight="8dp"
-                    app:layout_constraintRight_toRightOf="parent" />
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionSr"
+                    app:srcCompat="@drawable/ic_check"
+                    android:layout_marginEnd="8dp" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
 
