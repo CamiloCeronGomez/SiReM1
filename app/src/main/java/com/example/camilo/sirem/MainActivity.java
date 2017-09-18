@@ -23,11 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
         putFragment(R.id.container, MainFragment.instance());
-
         binding.setHandlerMain(this);
-
         //region Option Bottom Navigation Menu
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.btnBottom);
         bottomNavigationView.setOnNavigationItemSelectedListener(

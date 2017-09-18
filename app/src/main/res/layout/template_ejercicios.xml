@@ -8,6 +8,9 @@
             <variable
                 name="exercise"
                 type="com.example.camilo.sirem.models.Ejercicio" />
+            <variable
+                name="handler"
+                type="com.example.camilo.sirem.adapters.EjercicioAdapter"/>
         </data>
     <android.support.constraint.ConstraintLayout
         android:orientation="vertical"
@@ -15,6 +18,7 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -154,6 +158,7 @@
 
                 <Button
                     android:id="@+id/btnVerVideo"
+                    android:onClick="@{(view)->handler.onItemClick((int)view.tag)}"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -168,6 +173,7 @@
 
                 <Button
                     android:id="@+id/btnIniciar"
+
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/iniciar"

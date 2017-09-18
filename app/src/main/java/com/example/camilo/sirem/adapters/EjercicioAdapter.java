@@ -18,12 +18,18 @@ import java.util.List;
 
 public class EjercicioAdapter extends RecyclerView.Adapter<EjercicioAdapter.EjercicioHolder>{
 
+    public  interface OnEjercicioListener{
+        void onEjercicioClick (int position);
+    }
+
     LayoutInflater inflater;
     List<Ejercicio> data;
+    OnEjercicioListener listener;
 
-    public EjercicioAdapter(LayoutInflater inflater, List<Ejercicio> data) {
+    public EjercicioAdapter(LayoutInflater inflater, List<Ejercicio> data, OnEjercicioListener listener) {
         this.inflater = inflater;
         this.data = data;
+        this.listener = listener;
     }
 
     @Override
@@ -37,6 +43,9 @@ public class EjercicioAdapter extends RecyclerView.Adapter<EjercicioAdapter.Ejer
     @Override
     public void onBindViewHolder(EjercicioHolder holder, int position) {
         holder.binding.setExercise(data.get(position));
+        holder.binding.btnIniciar.setTag(position);
+        holder.binding.btnVerVideo.setTag(position);
+        holder.binding.setHandler(this);
     }
 
     @Override
@@ -44,6 +53,10 @@ public class EjercicioAdapter extends RecyclerView.Adapter<EjercicioAdapter.Ejer
         return data.size();
     }
 
+    public void onItemClick(int position){
+        listener.onEjercicioClick(position);
+
+    }
     //region ViewHolders
 
     static class EjercicioHolder  extends RecyclerView.ViewHolder{
