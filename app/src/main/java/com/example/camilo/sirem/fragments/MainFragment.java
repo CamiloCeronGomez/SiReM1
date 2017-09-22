@@ -44,6 +44,7 @@ public class MainFragment extends Fragment implements EjercicioAdapter.OnEjercic
     public void onEjercicioClick(int position) {
 
                 Intent intent = new Intent(getActivity(), VerVideoEjercicioActivity.class);
+                intent.putExtra("pos",position);
                 startActivity(intent);
 
 

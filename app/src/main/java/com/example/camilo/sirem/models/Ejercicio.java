@@ -5,7 +5,7 @@ package com.example.camilo.sirem.models;
  */
 
 public class Ejercicio {
-    String imagen, nombre, descripcion, serie, descriocionS;
+    String imagen, nombre, descripcion, serie, descriocionS, video;
 
     public String getImagen() {
         return imagen;
@@ -23,9 +23,7 @@ public class Ejercicio {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+    public String getDescripcion() { return descripcion; }
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
@@ -47,5 +45,8 @@ public class Ejercicio {
         this.descriocionS = descriocionS;
     }
 
+    public String getVideo() {return video;}
+
+    public void setVideo(String video) {this.video = video;}
 
 }

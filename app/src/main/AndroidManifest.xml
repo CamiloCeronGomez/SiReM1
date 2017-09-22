@@ -24,7 +24,10 @@
         <activity android:name=".PerfilActivity" />
         <activity android:name=".ProgresoActivity" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".VerVideoEjercicioActivity"></activity>
+        <activity android:name=".VerVideoEjercicioActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoActionBar"
+            />
     </application>
 
 </manifest>
