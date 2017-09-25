@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="handler"
+            type="com.example.camilo.sirem.Serie1Activity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.camilo.sirem.Serie1Activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/small">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serie 01"
+                android:textAlignment="center"
+                android:textSize="@dimen/big"
+                android:layout_marginBottom="@dimen/medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Realiza 10 Repeticiones"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="@dimen/medium" />
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="@dimen/icon_next"
+            android:layout_height="@dimen/icon_next"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_arrow"
+            app:layout_anchor="@+id/botNavLogin"
+            app:layout_anchorGravity="center_horizontal"
+            android:onClick="@{()->handler.goToDescanso1()}"/>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/botNavLogin"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+

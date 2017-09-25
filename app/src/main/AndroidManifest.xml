@@ -24,10 +24,18 @@
         <activity android:name=".PerfilActivity" />
         <activity android:name=".ProgresoActivity" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".VerVideoEjercicioActivity"
+        <activity
+            android:name=".VerVideoEjercicioActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/NoActionBar"
-            />
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".Serie1Activity" />
+        <activity android:name=".Descanso1Activity" />
+        <activity android:name=".Serie2Activity" />
+        <activity android:name=".Descanso2Activity" />
+        <activity android:name=".Serie3Activity" />
+        <activity android:name=".Descanso3Activity" />
+        <activity android:name=".Serie4Activity" />
+        <activity android:name=".Descanso4Activity"></activity>
     </application>
 
 </manifest>

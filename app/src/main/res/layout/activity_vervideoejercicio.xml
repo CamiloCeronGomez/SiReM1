@@ -6,6 +6,9 @@
     >
     <data>
         <variable
+            name="handler"
+            type="com.example.camilo.sirem.VerVideoEjercicioActivity"/>
+        <variable
             name="video"
             type="com.example.camilo.sirem.models.Ejercicio"/>
     </data>
@@ -30,9 +33,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:gravity="bottom"/>
+                android:gravity="bottom"
+                android:onClick="@{()->handler.goToSerie1()}"/>
 
         </FrameLayout>
     </android.support.design.widget.CoordinatorLayout>
 </layout>
+
 
