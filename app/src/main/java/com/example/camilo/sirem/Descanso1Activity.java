@@ -2,33 +2,44 @@ package com.example.camilo.sirem;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.example.camilo.sirem.databinding.ActivityDescanso1Binding;
 
 public class Descanso1Activity extends AppCompatActivity {
+
     ActivityDescanso1Binding binding;
+    private TextView txtCD1;
+    private CountDownTimer CD ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       binding = DataBindingUtil.setContentView(this, R.layout.activity_descanso1);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_descanso1);
         binding.setHandler(this);
-        goToContador();
-    }
-    public void goToContador(){
+        txtCD1 = (TextView) findViewById(R.id.txtCD1);
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        CD =  new CountDownTimer(10000,1000){
 
             @Override
-            public void run() {
+            public void onTick(long millisUntilFinished) {
+            txtCD1.setText(""+millisUntilFinished/1000);
+            }
+
+            @Override
+            public void onFinish() {
                 goToSerie2();
             }
-        }, 10000);
+        }.start();
+
     }
+
+
     public void goToSerie2() {
+        CD.cancel();
         Intent intent = new Intent(this, Serie2Activity.class);
         startActivity(intent);
     }
