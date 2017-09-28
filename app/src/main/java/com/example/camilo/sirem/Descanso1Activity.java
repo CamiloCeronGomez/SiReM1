@@ -13,7 +13,7 @@ public class Descanso1Activity extends AppCompatActivity {
 
     ActivityDescanso1Binding binding;
     private TextView txtCD1;
-    private CountDownTimer CD ;
+    private CountDownTimer CD1 = null ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class Descanso1Activity extends AppCompatActivity {
         binding.setHandler(this);
         txtCD1 = (TextView) findViewById(R.id.txtCD1);
 
-        CD =  new CountDownTimer(10000,1000){
+        CD1 =  new CountDownTimer(11000,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -31,6 +31,8 @@ public class Descanso1Activity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                txtCD1.setText("0");
+                CD1.cancel();
                 goToSerie2();
             }
         }.start();
@@ -39,7 +41,7 @@ public class Descanso1Activity extends AppCompatActivity {
 
 
     public void goToSerie2() {
-        CD.cancel();
+
         Intent intent = new Intent(this, Serie2Activity.class);
         startActivity(intent);
     }

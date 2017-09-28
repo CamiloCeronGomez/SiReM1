@@ -21,7 +21,7 @@
             android:padding="@dimen/small">
 
             <TextView
-
+                android:id="@+id/txtCD3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="10"
