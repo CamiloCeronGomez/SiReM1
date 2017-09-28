@@ -161,29 +161,18 @@
 
                 <Button
                     android:id="@+id/btnVerVideo"
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:onClick="@{(view)->handler.onItemClick(( int )view.tag )}"
                     android:text="@string/vervideo"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toLeftOf="@+id/btnIniciar"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/iconCheck"
                     app:layout_constraintVertical_bias="1.0"
                     tools:text="@string/vervideo" />
-
-                <Button
-                    android:id="@+id/btnIniciar"
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/iniciar"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnVerVideo"
-                    app:layout_constraintLeft_toRightOf="@+id/btnVerVideo"
-                    app:layout_constraintRight_toRightOf="parent"
-                    tools:text="@string/iniciar" />
 
                 <ImageView
                     android:id="@+id/iconCheck"

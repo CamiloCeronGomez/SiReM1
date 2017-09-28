@@ -43,7 +43,7 @@ public class EjercicioAdapter extends RecyclerView.Adapter<EjercicioAdapter.Ejer
     @Override
     public void onBindViewHolder(EjercicioHolder holder, int position) {
         holder.binding.setExercise(data.get(position));
-        holder.binding.btnIniciar.setTag(position);
+
         holder.binding.btnVerVideo.setTag(position);
         holder.binding.setHandler(this);
     }
