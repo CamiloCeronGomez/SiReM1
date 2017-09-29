@@ -35,7 +35,8 @@
         <activity android:name=".Serie3Activity" />
         <activity android:name=".Descanso3Activity" />
         <activity android:name=".Serie4Activity" />
-        <activity android:name=".Descanso4Activity"></activity>
+        <activity android:name=".Descanso4Activity" />
+        <activity android:name=".MainEvaluarActivity"></activity>
     </application>
 
 </manifest>
