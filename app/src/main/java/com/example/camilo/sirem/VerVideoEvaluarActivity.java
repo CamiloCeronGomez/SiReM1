@@ -1,5 +1,6 @@
 package com.example.camilo.sirem;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,5 +24,9 @@ public class VerVideoEvaluarActivity extends AppCompatActivity {
         Evaluar evaluar = DataEvaluar.getEvaluaciones().get(pos);
         binding.setVideo(evaluar);
         binding.videoEv.setMediaController(new MediaController(this));
+    }
+    public void goToEspere(){
+        Intent intent = new Intent(this, EspereActivity.class);
+        startActivity(intent);
     }
 }

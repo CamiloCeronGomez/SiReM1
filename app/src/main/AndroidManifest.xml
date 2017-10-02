@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".PerfilActivity" />
         <activity android:name=".ProgresoActivity" />
@@ -41,6 +41,7 @@
             android:name=".VerVideoEvaluarActivity"
             android:screenOrientation="landscape"
             android:theme="@style/NoActionBar" />
+        <activity android:name=".EspereActivity"></activity>
     </application>
 
 </manifest>
