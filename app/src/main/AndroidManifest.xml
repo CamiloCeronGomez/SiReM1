@@ -14,11 +14,7 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".PerfilActivity" />
@@ -36,7 +32,13 @@
         <activity android:name=".Descanso3Activity" />
         <activity android:name=".Serie4Activity" />
         <activity android:name=".Descanso4Activity" />
-        <activity android:name=".MainEvaluarActivity"></activity>
+        <activity android:name=".MainEvaluarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
