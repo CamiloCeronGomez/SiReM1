@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import com.example.camilo.sirem.R;
 import com.example.camilo.sirem.databinding.TemplateEvaluarBinding;
-import com.example.camilo.sirem.fragments.MainEvaluarFragment;
 import com.example.camilo.sirem.models.Evaluar;
 
 import java.util.List;
@@ -19,35 +18,44 @@ import java.util.List;
 
 public class EvaluarAdapter extends RecyclerView.Adapter<EvaluarAdapter.EvaluarHolder> {
 
+    public  interface OnEvaluarListener{
+        void onEvaluarClick (int position);
+    }
     LayoutInflater inflater;
     List<Evaluar> data;
+    OnEvaluarListener listener;
 
 
-    public EvaluarAdapter(LayoutInflater inflater, List<Evaluar> data, MainEvaluarFragment mainEvaluarFragment) {
+    public EvaluarAdapter(LayoutInflater inflater, List<Evaluar> data, OnEvaluarListener listener) {
         this.inflater = inflater;
         this.data = data;
-
+        this.listener = listener;
     }
 
 
     @Override
-    public EvaluarAdapter.EvaluarHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public EvaluarHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View v = inflater.inflate(R.layout.template_evaluar, parent, false);
 
-        return new EvaluarAdapter.EvaluarHolder(v) ;
+        return new EvaluarHolder(v) ;
     }
 
     @Override
-    public void onBindViewHolder(EvaluarAdapter.EvaluarHolder holder, int position) {
+    public void onBindViewHolder(EvaluarHolder holder, int position) {
         holder.binding.setEvaluation(data.get(position));
-
+        holder.binding.btnVerVideoEv.setTag(position);
         holder.binding.setHandler(this);
     }
 
     @Override
     public int getItemCount() {
         return data.size();
+    }
+
+    public void onItemClick(int position){
+        listener.onEvaluarClick(position);
+
     }
 
     //region ViewHolders

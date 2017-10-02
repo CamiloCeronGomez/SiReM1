@@ -1,5 +1,6 @@
 package com.example.camilo.sirem.util;
 
+import com.example.camilo.sirem.R;
 import com.example.camilo.sirem.models.Evaluar;
 
 import java.util.ArrayList;
@@ -18,24 +19,28 @@ public class DataEvaluar {
             Evaluar ev1 = new Evaluar();
             ev1.setNombreEv("Flexion");
             ev1.setDescripcionEv("Se dispone la mano de forma horizontal y se baja la mano");
+            ev1.setVideo("android.resource://com.example.camilo.sirem/"+ R.raw.pasos);
 
             evaluaciones.add(ev1);
 
             Evaluar ev2 = new Evaluar();
             ev2.setNombreEv("Extencion");
             ev2.setDescripcionEv("Se dispone la mano de forma horizontal y se sube la mano");
+            ev2.setVideo("android.resource://com.example.camilo.sirem/"+ R.raw.pasos);
 
             evaluaciones.add(ev2);
 
             Evaluar ev3 = new Evaluar();
             ev3.setNombreEv("Desviacion Radial");
             ev3.setDescripcionEv("Se dispone la mano de forma horizontal y se gira a la izquierda");
+            ev3.setVideo("android.resource://com.example.camilo.sirem/"+ R.raw.pasos);
 
             evaluaciones.add(ev3);
 
             Evaluar ev4 = new Evaluar();
             ev4.setNombreEv("Desviacion Ulnar");
             ev4.setDescripcionEv("Se dispone la mano de forma horizontal y gira a la derecha");
+            ev4.setVideo("android.resource://com.example.camilo.sirem/"+ R.raw.pasos);
 
             evaluaciones.add(ev4);
 

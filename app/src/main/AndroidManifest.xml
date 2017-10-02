@@ -13,9 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/NoActionBar">
-
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".PerfilActivity" />
         <activity android:name=".ProgresoActivity" />
@@ -39,6 +37,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".VerVideoEvaluarActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoActionBar" />
     </application>
 
 </manifest>

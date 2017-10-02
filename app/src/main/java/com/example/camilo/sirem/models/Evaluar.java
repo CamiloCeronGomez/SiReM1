@@ -5,7 +5,7 @@ package com.example.camilo.sirem.models;
  */
 
 public class Evaluar {
-    String nombreEv, descripcionEv;
+    String nombreEv, descripcionEv, video;
 
     public String getNombreEv() {
         return nombreEv;
@@ -20,4 +20,8 @@ public class Evaluar {
     public void setDescripcionEv(String descripcionEv) {
         this.descripcionEv = descripcionEv;
     }
+
+    public String getVideo() {return video;}
+
+    public void setVideo(String video) {this.video = video;}
 }
