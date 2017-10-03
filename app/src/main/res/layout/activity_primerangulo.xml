@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/txtPrimerAngulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="49"
-        android:textAlignment="center"
-        android:textSize="@dimen/big"
-        android:layout_marginBottom="@dimen/medium" />
+    >
+<data>
 
-    <TextView
+</data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Resultado"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:layout_marginBottom="@dimen/medium" />
-</LinearLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtPrimerAngulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="49"
+            android:textAlignment="center"
+            android:textSize="@dimen/big"
+            android:layout_marginBottom="@dimen/medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultado"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_marginBottom="@dimen/medium" />
+    </LinearLayout>
+</layout>

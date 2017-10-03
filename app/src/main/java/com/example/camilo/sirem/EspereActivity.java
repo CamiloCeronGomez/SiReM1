@@ -1,10 +1,15 @@
 package com.example.camilo.sirem;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.camilo.sirem.databinding.ActivitySegundoanguloBinding;
+import com.example.camilo.sirem.fragments.MainEvaluarFragment;
+
 public class EspereActivity extends AppCompatActivity {
+    ActivitySegundoanguloBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +63,10 @@ public class EspereActivity extends AppCompatActivity {
             }
         }, 2000);
 
+    }
+    public void goToMainEvaluar() {
+
+        Intent intent = new Intent(this, MainEvaluarFragment.class);
+        startActivity(intent);
     }
 }
