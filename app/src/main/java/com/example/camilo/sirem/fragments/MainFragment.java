@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.camilo.sirem.MainEvaluarActivity;
 import com.example.camilo.sirem.R;
 import com.example.camilo.sirem.VerVideoEjercicioActivity;
 import com.example.camilo.sirem.adapters.EjercicioAdapter;
@@ -57,7 +58,10 @@ public class MainFragment extends Fragment implements EjercicioAdapter.OnEjercic
          }
 
     @Override
-    public void onBtnEvaluarClick() {
+    public void onBtnEvaluarClick(int position) {
+        Intent intent = new Intent(getActivity(), MainEvaluarActivity.class);
+        intent.putExtra("pos",position);
+        startActivity(intent);
 
     }
 

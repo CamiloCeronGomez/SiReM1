@@ -4,7 +4,7 @@
     >
     <data>
         <variable
-            name="btnEvaluar"
+            name="buttonEvaluar"
             type="com.example.camilo.sirem.models.BtnEvaluar"/>
         <variable
             name="handler"
@@ -17,10 +17,11 @@
         android:layout_height="match_parent">
 
         <Button
+            android:id="@+id/btnEvaluacion"
             android:text="Evaluar Semana"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{()->handler.goToEvaluacion()}"/>
+            android:onClick="@{(view)->handler.goToEvaluacion(( int )view.tag)}"/>
 
     </LinearLayout>
 </layout>

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.camilo.sirem.R;
 import com.example.camilo.sirem.databinding.TemplateBtnevaluarBinding;
+
 import com.example.camilo.sirem.databinding.TemplateEjerciciosBinding;
 import com.example.camilo.sirem.models.BtnEvaluar;
 import com.example.camilo.sirem.models.Ejercicio;
@@ -19,7 +20,7 @@ import java.util.List;
  * Created by camilo on 07/07/2017.
  */
 
-public class EjercicioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class EjercicioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     LayoutInflater inflater;
     List<Item> data;
@@ -28,7 +29,7 @@ public class EjercicioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public  interface OnEjercicioListener{
         void onEjercicioClick (int position);
-        void onBtnEvaluarClick();
+        void onBtnEvaluarClick( int position );
     }
 
 
@@ -62,7 +63,9 @@ public class EjercicioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
            ((EjercicioHolder) holder).binding.btnVerVideo.setTag(position);
            ((EjercicioHolder) holder).binding.setHandler(this);
        }else {
-           ((BtnEvaluarHolder) holder).binding.setBtnEvaluar((BtnEvaluar) data.get(position));
+           ((BtnEvaluarHolder) holder).binding.setButtonEvaluar((BtnEvaluar) data.get(position));
+           ((BtnEvaluarHolder) holder).binding.btnEvaluacion.setTag(position);
+           ((BtnEvaluarHolder) holder).binding.setHandler(this);
        }
 
     }
@@ -76,8 +79,8 @@ public class EjercicioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         listener.onEjercicioClick(position);
 
     }
-    public void goToEvaluacion(int position){
-        listener.onBtnEvaluarClick();
+    public void goToEvaluacion( int position){
+        listener.onBtnEvaluarClick(position);
 
     }
 
