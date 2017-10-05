@@ -14,7 +14,12 @@ import com.example.camilo.sirem.R;
 import com.example.camilo.sirem.VerVideoEjercicioActivity;
 import com.example.camilo.sirem.adapters.EjercicioAdapter;
 import com.example.camilo.sirem.databinding.FragmentMainBinding;
-import com.example.camilo.sirem.util.Data;
+import com.example.camilo.sirem.models.BtnEvaluar;
+import com.example.camilo.sirem.models.Ejercicio;
+import com.example.camilo.sirem.models.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,15 +33,18 @@ public class MainFragment extends Fragment implements EjercicioAdapter.OnEjercic
 
     FragmentMainBinding binding;
     EjercicioAdapter adapter;
+   public static List<Item> data;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
-        adapter = new EjercicioAdapter(getLayoutInflater(null), Data.getEjercicios(), this);
+        data= new ArrayList<>();
+        adapter = new EjercicioAdapter(inflater,data, this);
         binding.recycler.setAdapter(adapter);
         binding.recycler.setLayoutManager(new LinearLayoutManager(getContext()));
         // Inflate the layout for this fragment
+        loadData();
         return binding.getRoot();
     }
 
@@ -47,6 +55,24 @@ public class MainFragment extends Fragment implements EjercicioAdapter.OnEjercic
         intent.putExtra("pos",position);
         startActivity(intent);
          }
+
+    @Override
+    public void onBtnEvaluarClick() {
+
+    }
+
+
+    public void loadData(){
+
+        data.add(new Ejercicio("https://ibb.co/d4n8GG","Hacer Puño", "Extienda los dedos antes de hacer puño","Series", "4 Series de 10 Repeticiones", "android.resource://com.example.camilo.sirem/"+ R.raw.vs1_e1));
+        data.add(new BtnEvaluar(""));
+
+        adapter.notifyDataSetChanged();
+    }
+
+
+
+
 
         }
 

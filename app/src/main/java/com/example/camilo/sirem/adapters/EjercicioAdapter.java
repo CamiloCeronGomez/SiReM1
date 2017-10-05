@@ -7,8 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.camilo.sirem.R;
+import com.example.camilo.sirem.databinding.TemplateBtnevaluarBinding;
 import com.example.camilo.sirem.databinding.TemplateEjerciciosBinding;
+import com.example.camilo.sirem.models.BtnEvaluar;
 import com.example.camilo.sirem.models.Ejercicio;
+import com.example.camilo.sirem.models.Item;
 
 import java.util.List;
 
@@ -16,35 +19,52 @@ import java.util.List;
  * Created by camilo on 07/07/2017.
  */
 
-public class EjercicioAdapter extends RecyclerView.Adapter<EjercicioAdapter.EjercicioHolder>{
+public class EjercicioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+
+    LayoutInflater inflater;
+    List<Item> data;
+    OnEjercicioListener listener;
+
 
     public  interface OnEjercicioListener{
         void onEjercicioClick (int position);
+        void onBtnEvaluarClick();
     }
 
-    LayoutInflater inflater;
-    List<Ejercicio> data;
-    OnEjercicioListener listener;
 
-    public EjercicioAdapter(LayoutInflater inflater, List<Ejercicio> data, OnEjercicioListener listener) {
+
+
+    public EjercicioAdapter(LayoutInflater inflater, List<Item> data, OnEjercicioListener listener) {
         this.inflater = inflater;
         this.data = data;
         this.listener = listener;
     }
 
     @Override
-    public EjercicioHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        RecyclerView.ViewHolder holder;
+        if(viewType == Item.TIPO_UNO){
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.template_ejercicios, parent, false);
+            holder = new EjercicioHolder(v);
+        }else{
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.template_btnevaluar, parent, false);
+            holder = new BtnEvaluarHolder(v);
+        }
 
-        View v = inflater.inflate(R.layout.template_ejercicios, parent, false);
 
-        return new EjercicioHolder(v) ;
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(EjercicioHolder holder, int position) {
-        holder.binding.setExercise(data.get(position));
-        holder.binding.btnVerVideo.setTag(position);
-        holder.binding.setHandler(this);
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+       if (holder instanceof  EjercicioHolder){
+           ((EjercicioHolder) holder).binding.setExercise((Ejercicio) data.get(position));
+           ((EjercicioHolder) holder).binding.btnVerVideo.setTag(position);
+           ((EjercicioHolder) holder).binding.setHandler(this);
+       }else {
+           ((BtnEvaluarHolder) holder).binding.setBtnEvaluar((BtnEvaluar) data.get(position));
+       }
+
     }
 
     @Override
@@ -56,12 +76,31 @@ public class EjercicioAdapter extends RecyclerView.Adapter<EjercicioAdapter.Ejer
         listener.onEjercicioClick(position);
 
     }
+    public void goToEvaluacion(int position){
+        listener.onBtnEvaluarClick();
+
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return data.get(position).getTipo();
+    }
+
     //region ViewHolders
 
     static class EjercicioHolder  extends RecyclerView.ViewHolder{
 
         TemplateEjerciciosBinding binding;
         public EjercicioHolder(View itemView) {
+            super(itemView);
+            binding = DataBindingUtil.bind(itemView);
+        }
+    }
+    class BtnEvaluarHolder extends RecyclerView.ViewHolder{
+
+        TemplateBtnevaluarBinding binding;
+
+        public BtnEvaluarHolder(View itemView) {
             super(itemView);
             binding = DataBindingUtil.bind(itemView);
         }

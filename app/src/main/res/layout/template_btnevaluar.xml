@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="btnEvaluar"
+            type="com.example.camilo.sirem.models.BtnEvaluar"/>
+        <variable
+            name="handler"
+            type="com.example.camilo.sirem.adapters.EjercicioAdapter"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Evaluar Semana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->handler.goToEvaluacion()}"/>
+
+    </LinearLayout>
+</layout>

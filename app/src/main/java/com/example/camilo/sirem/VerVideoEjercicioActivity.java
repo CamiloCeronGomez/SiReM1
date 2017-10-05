@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.MediaController;
 
 import com.example.camilo.sirem.databinding.ActivityVervideoejercicioBinding;
+import com.example.camilo.sirem.fragments.MainFragment;
 import com.example.camilo.sirem.models.Ejercicio;
-import com.example.camilo.sirem.util.Data;
 
 
 public class VerVideoEjercicioActivity extends AppCompatActivity {
@@ -22,7 +22,8 @@ public class VerVideoEjercicioActivity extends AppCompatActivity {
         binding.setHandler(this);
 
         int pos = getIntent().getExtras().getInt("pos");
-        Ejercicio ejercicio = Data.getEjercicios().get(pos);
+
+        Ejercicio ejercicio = (Ejercicio) MainFragment.data.get(pos);
         binding.setVideo(ejercicio);
         binding.videoP.setMediaController(new MediaController(this));
 

@@ -4,8 +4,23 @@ package com.example.camilo.sirem.models;
  * Created by camilo on 07/07/2017.
  */
 
-public class Ejercicio {
-    String imagen, nombre, descripcion, serie, descriocionS, video;
+public class Ejercicio implements Item {
+    String imagen;
+    String nombre;
+
+    public Ejercicio(String imagen, String nombre, String descripcion, String serie, String descriocionS, String video) {
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.serie = serie;
+        this.descriocionS = descriocionS;
+        this.video = video;
+    }
+
+    String descripcion;
+    String serie;
+    String descriocionS;
+    String video;
 
     public String getImagen() {
         return imagen;
@@ -48,5 +63,9 @@ public class Ejercicio {
     public String getVideo() {return video;}
 
     public void setVideo(String video) {this.video = video;}
+    @Override
+    public int getTipo() {
+        return TIPO_UNO;
+    }
 
 }
