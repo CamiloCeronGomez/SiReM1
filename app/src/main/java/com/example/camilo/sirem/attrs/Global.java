@@ -5,8 +5,6 @@ import android.net.Uri;
 import android.widget.ImageView;
 import android.widget.VideoView;
 
-import com.squareup.picasso.Picasso;
-
 /**
  * Created by camilo on 21/07/2017.
  */
@@ -15,7 +13,8 @@ public class Global {
 
     @BindingAdapter("app:imgUrl")
     public static void setImage(ImageView img, String url ){
-        Picasso.with(img.getContext()).load(Uri.parse(url)).into(img);
+        img.setImageURI(Uri.parse(url));
+      //  Picasso.with(img.getContext()).load(Uri.parse(url)).into(img);
         // public static void setImagen(ImageView img, String url){imagen.setImagenURI(Uri.parse(url)); }
 
 
