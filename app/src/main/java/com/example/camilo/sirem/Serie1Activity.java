@@ -13,7 +13,7 @@ public class Serie1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      binding = DataBindingUtil.setContentView(this, R.layout.activity_serie1);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_serie1);
         binding.setHandler(this);
     }
     public void goToDescanso1() {

@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
     <data>
-
+        <variable
+            name="handler"
+            type="com.example.camilo.sirem.EspereActivity"/>
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -14,6 +16,7 @@
         tools:context="com.example.camilo.sirem.EspereActivity">
 
         <LinearLayout
+            android:id="@+id/layoutEspere"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -38,6 +41,111 @@
                 android:layout_marginBottom="@dimen/medium" />
 
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutPrimerInicia"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtPrimerInicia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicia"
+                android:textAlignment="center"
+                android:textSize="@dimen/big"
+                android:layout_marginBottom="@dimen/medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Primer Intento"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="@dimen/medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutPrimerAngulo"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtPrimerAngulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="49"
+                android:textAlignment="center"
+                android:textSize="@dimen/big"
+                android:layout_marginBottom="@dimen/medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="@dimen/medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutSegundoInicia"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtSegundoInicia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicia"
+                android:textAlignment="center"
+                android:textSize="@dimen/big"
+                android:layout_marginBottom="@dimen/medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Segundo Intento"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="@dimen/medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutSegundoAngulo"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtSegundoAngulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="49"
+                android:textAlignment="center"
+                android:textSize="@dimen/big"
+                android:layout_marginBottom="@dimen/medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="@dimen/medium" />
+
+            <Button
+                android:layout_gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continuar"
+                android:onClick="@{()->handler.goToMainEvaluar()}"
+                />
+        </LinearLayout>
+
     </android.support.constraint.ConstraintLayout>
 </layout>
 
