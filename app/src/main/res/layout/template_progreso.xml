@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="progresos"
+            type="com.example.camilo.sirem.models.Progreso"/>
+    </data>
+<android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -48,13 +56,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/textSemanaX"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="SemanaX" />
+                        android:text="@{progresos.semanaX}" />
                 </TableRow>
 
                 <TableRow
@@ -62,44 +69,44 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/textDia"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Dia" />
+                        android:text="@{progresos.dia}" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textFl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="FL" />
+                        android:text="@{progresos.fl}" />
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/textEx"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="EX" />
+                        android:text="@{progresos.ex}" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/textDr"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="DR" />
+                        android:text="@{progresos.dr}" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/textDu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="DU" />
+                        android:text="@{progresos.du}" />
                 </TableRow>
 
                 <TableRow
@@ -107,44 +114,44 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/txtDia1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="01" />
+                        android:text="@{progresos.dia1}" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/txtFl1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl1}"/>
 
                     <TextView
-                        android:id="@+id/textView18"
+                        android:id="@+id/txtEx1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex1}" />
 
                     <TextView
-                        android:id="@+id/textView19"
+                        android:id="@+id/txtDr1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr1}"/>
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/txtDu1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du1}" />
                 </TableRow>
 
                 <TableRow
@@ -152,44 +159,44 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/txtDia2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="02" />
+                        android:text="@{progresos.dia2}" />
 
                     <TextView
-                        android:id="@+id/textView22"
+                        android:id="@+id/txtFl2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl2}" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/txtEx2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex2}" />
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/txtDr2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr2}" />
 
                     <TextView
-                        android:id="@+id/textView25"
+                        android:id="@+id/txtDu2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du2}" />
                 </TableRow>
 
                 <TableRow
@@ -197,44 +204,44 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView26"
+                        android:id="@+id/txtDia3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="03" />
+                        android:text="@{progresos.dia3}" />
 
                     <TextView
-                        android:id="@+id/textView27"
+                        android:id="@+id/txtFl3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl3}" />
 
                     <TextView
-                        android:id="@+id/textView28"
+                        android:id="@+id/txtEx3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex3}" />
 
                     <TextView
-                        android:id="@+id/textView29"
+                        android:id="@+id/txtDr3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr3}" />
 
                     <TextView
-                        android:id="@+id/textView30"
+                        android:id="@+id/txtDu3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du3}" />
                 </TableRow>
 
                 <TableRow
@@ -242,44 +249,44 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView31"
+                        android:id="@+id/txtDia4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="04" />
+                        android:text="@{progresos.dia4}" />
 
                     <TextView
-                        android:id="@+id/textView32"
+                        android:id="@+id/txtFl4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl4}" />
 
                     <TextView
-                        android:id="@+id/textView33"
+                        android:id="@+id/txtEx4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex4}" />
 
                     <TextView
-                        android:id="@+id/textView34"
+                        android:id="@+id/txtDr4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr4}" />
 
                     <TextView
-                        android:id="@+id/textView35"
+                        android:id="@+id/txtDu4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du4}" />
                 </TableRow>
 
                 <TableRow
@@ -287,44 +294,44 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView36"
+                        android:id="@+id/txtDia5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="05" />
+                        android:text="@{progresos.dia6}" />
 
                     <TextView
-                        android:id="@+id/textView37"
+                        android:id="@+id/txtFl5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl5}" />
 
                     <TextView
-                        android:id="@+id/textView38"
+                        android:id="@+id/txtEx5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex5}" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/txtDr5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr5}" />
 
                     <TextView
-                        android:id="@+id/textView40"
+                        android:id="@+id/txtDu5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du5}" />
                 </TableRow>
 
                 <TableRow
@@ -332,44 +339,44 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textView41"
+                        android:id="@+id/txtDia6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="06" />
+                        android:text="@{progresos.dia6}" />
 
                     <TextView
-                        android:id="@+id/textView42"
+                        android:id="@+id/txtFl6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl6}" />
 
                     <TextView
-                        android:id="@+id/textView43"
+                        android:id="@+id/txtEx6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex6}" />
 
                     <TextView
-                        android:id="@+id/textView44"
+                        android:id="@+id/txtDr6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr6}" />
 
                     <TextView
-                        android:id="@+id/textView45"
+                        android:id="@+id/txtDu6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du6}" />
                 </TableRow>
 
                 <TableRow
@@ -377,46 +384,47 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView46"
+                        android:id="@+id/txtDia7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="07" />
+                        android:text="@{progresos.dia7}" />
 
                     <TextView
-                        android:id="@+id/textView47"
+                        android:id="@+id/txtFl7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.fl7}" />
 
                     <TextView
-                        android:id="@+id/textView48"
+                        android:id="@+id/txtEx7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.ex7}" />
 
                     <TextView
-                        android:id="@+id/textView49"
+                        android:id="@+id/txtDr7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.dr7}" />
 
                     <TextView
-                        android:id="@+id/textView50"
+                        android:id="@+id/txtDu7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="45" />
+                        android:text="@{progresos.du7}" />
                 </TableRow>
             </TableLayout>
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>
+</layout>

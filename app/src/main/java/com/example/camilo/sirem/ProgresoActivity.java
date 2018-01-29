@@ -1,20 +1,29 @@
 package com.example.camilo.sirem;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.camilo.sirem.databinding.ActivityProgresoBinding;
+import com.example.camilo.sirem.fragments.ProgresoFragment;
+
 public class ProgresoActivity extends AppCompatActivity {
+    ActivityProgresoBinding binding;
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_progreso);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_progreso);
+        putFragment(R.id.containerProgreso, ProgresoFragment.instance());
+        binding.setHandlerProgreso(this);
 
         //region Option Bottom Navigation Menu
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.btnBottom);
@@ -48,6 +57,13 @@ public class ProgresoActivity extends AppCompatActivity {
 
     }
     //region Option Info Menu
+
+    public void putFragment(int containerProgreso, Fragment fragment) {
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(containerProgreso, fragment);
+        ft.commit();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main,menu);
