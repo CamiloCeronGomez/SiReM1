@@ -61,7 +61,7 @@ public class EspereActivity extends AppCompatActivity implements SensorEventList
         if (acelerometro == null)
             finish();
 
-        primerinicia();
+       primerinicia();
     }
     protected void onResume(){
         super.onResume();
@@ -74,7 +74,10 @@ public class EspereActivity extends AppCompatActivity implements SensorEventList
     @Override
     public void onSensorChanged(SensorEvent event){
         Ac = event.values[0];
+        txtPrimerAngulo.setText(""+ Ac);
+        txtSegundoAngulo.setText(""+ Ac);
     }
+
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
@@ -110,7 +113,7 @@ public class EspereActivity extends AppCompatActivity implements SensorEventList
                 layoutSegundoInicia.setVisibility(View.INVISIBLE);
                 layoutSegundoAngulo.setVisibility(View.INVISIBLE);
 
-                txtPrimerAngulo.setText(""+ Ac);
+                txtPrimerAngulo.setText("50"+ Ac);
 
                 segundoinicia();
             }
@@ -146,6 +149,8 @@ public class EspereActivity extends AppCompatActivity implements SensorEventList
                 layoutSegundoAngulo.setVisibility(View.VISIBLE);
 
                 txtSegundoAngulo.setText(""+ Ac);
+
+
 
 
             }
